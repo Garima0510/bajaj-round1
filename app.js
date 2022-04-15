@@ -25,14 +25,14 @@ app.post("/bfhl", function(req, res){
             numeric.push(value)
         }
         else{
-            if(value>="A" && value<="Z" || value>= "a" && value>="z"  ){
+            if(value>="A" && value<="Z" || value>= "a" && value<="z"  ){
                 alphabets.push(value);
 
             }
         }
     })
-    output ={
-        is_success:is-is_success,
+    output = {
+        is_success:is_success,
         user_id:"garimamathur_05102001",
         email:"garimamathurcs19@acropolis.in",
         roll_no:"0827CsS191090",
@@ -41,7 +41,6 @@ app.post("/bfhl", function(req, res){
 
     };
     res.json(output);
-
 
 })
 app.listen(port)
